@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    
+}
+
+.container {
+    min-height: 100vh;
+ 
+}
+
+.background_container {
+    min-height: 100vh;
+    background-image: 
+    url('./assets/movie_collage.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.row {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 24px 6px 24px;
+}
+
+form {
+        min-width: 400px;
+}
+
+button {
+    padding: 0px 8px 0px 8px;
+}
+
+.avatar {
+    cursor: pointer;
+    margin: 12px;
+    transition: all .3s ease;
+}
+
+.avatar:hover {
+    scale: 1.1;
+    filter: brightness(.9);
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
+h1 {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+/* NAVIGATION */
+
+nav {
+    background-color: transparent;
+}
+
+
+.nav_wrapper {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     
+}
+
+.logo_svg {
+    width: 25%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* FOOTER */
+
+footer{
+    background-color: rgb(38, 39, 39);
+}
+
+.footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icons_wrapper {
+    color: red;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+}
+
+.footer_logo {
+    width: 25%;
+}
+
+.footer__links-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+/* HOME */
+.form {
+    margin-bottom: 32px;
+}
+
+.home_wrapper, .signin_wrapper {
+    margin-top: 60px;
+}
+
+.signin_wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.home_title {
+    font-size: 54px;
+    font-weight: 900;
+    text-align: center;
+    max-width: 65%;
+    margin: 0 auto;
+}
+
+.signup_form, .signin_form {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+}
+
+
+.form_button {
+    margin: 0 auto;
+    background-color: red;
+}
+
+.explore_button {
+   margin-top: 150%;
+}
+
+
+/* sign in */
+
+.signin_title {
+    font-size: 54px;
+    font-weight: 900;
+    text-align: center;
+    margin: 0 auto;
+}

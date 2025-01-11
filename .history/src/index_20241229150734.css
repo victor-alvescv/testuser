@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+/* Cart/Checkout */
+
+.checkout {
+  padding: 64px;
+}
+
+.cart__title {
+  display: flex; 
+  font-size: 32px;
+  margin-top: 24px;
+}
+
+.cart__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: red;
+  height: 38px;
+  padding: 18px;
+  margin-top: 18px;
+}
+
+.header__quantity {
+  margin-left: 30%;
+}
+
+.htxt {
+  font-weight: 700;
+}
+
+/* Cart Item */
+
+.cart__item--wrapper {
+  display: flex;
+  align-items: center;
+  height: 200px;
+}
+
+.cart__item--poster-wrapper {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.cart__item--poster {
+  width: 150px;
+  height: 100%;
+  display: flex;
+}
+
+
+.cart__item--info {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+
+  height: 100%;
+  margin-left: 12px;
+}
+
+.cart__item--title {
+  
+}
+
+
+
