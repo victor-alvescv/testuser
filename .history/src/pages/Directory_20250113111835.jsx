@@ -66,7 +66,7 @@ useLayoutEffect(() => {
 
     useEffect(() => {
         startSearch();
-    }, [search, page, type]);
+    }, [search, page]);
 
 
     return (
@@ -104,15 +104,9 @@ useLayoutEffect(() => {
                         </Link>
                         </div>
                     <div className="search__type--wrapper">
-                        <button className={`search__type-button ${type === '' ? 'active' : ''}`}
-                        onClick={() => setType('')}
-                        >All</button>
-                        <button className={`search__type-button ${type === 'movie' ? 'active' : ''}`}
-                        onClick={() => setType('movie')}
-                        >Movies</button>
-                        <button className={`search__type-button ${type === 'series' ? 'active' : ''}`}
-                        onClick={() => setType('series')}
-                        >Series</button>
+                        <button className='search__type-button'>All</button>
+                        <button className='search__type-button'>Movies</button>
+                        <button className='search__type-button'>Series</button>
                     </div>
                     </div>
 

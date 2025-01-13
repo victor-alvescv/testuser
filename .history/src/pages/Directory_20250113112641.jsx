@@ -107,10 +107,10 @@ useLayoutEffect(() => {
                         <button className={`search__type-button ${type === '' ? 'active' : ''}`}
                         onClick={() => setType('')}
                         >All</button>
-                        <button className={`search__type-button ${type === 'movie' ? 'active' : ''}`}
+                        <button className={`search__type-button ${type === '' ? 'active' : ''}`}
                         onClick={() => setType('movie')}
                         >Movies</button>
-                        <button className={`search__type-button ${type === 'series' ? 'active' : ''}`}
+                        <button className={`search__type-button ${type === '' ? 'active' : ''}`}
                         onClick={() => setType('series')}
                         >Series</button>
                     </div>

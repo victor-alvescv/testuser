@@ -471,7 +471,6 @@ footer{
 .searchbar__wrapper {
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
 }
 
@@ -523,7 +522,7 @@ footer{
     transition: all .5s ease
 }
 
-.search__type-button:hover, .active {
+.search__type-button:hover {
     background-color: white;
     color: black;
 

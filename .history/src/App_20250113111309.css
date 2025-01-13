@@ -469,10 +469,9 @@ footer{
 }
     
 .searchbar__wrapper {
+  
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 
 .searchbar__container {
@@ -503,8 +502,8 @@ footer{
 }
 
 .search__type--wrapper {
+    margin-top: 12px;
     width: 100%;
-    padding: 14px;
 
     display: flex;
     justify-content:flex-start;
@@ -517,16 +516,6 @@ footer{
     height: 30px;
     border: 1px solid white;
     border-radius: 15px;
-    margin-left: 8px;
-    cursor: pointer;
-
-    transition: all .5s ease
-}
-
-.search__type-button:hover, .active {
-    background-color: white;
-    color: black;
-
 }
 
 .nextPage_btn, .prevPage_btn {

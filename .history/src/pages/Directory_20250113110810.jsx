@@ -2,12 +2,14 @@ import MovieCard from '../components/MovieCard';
 import React, { useEffect, useLayoutEffect, useState } from 'react';
 import styles from "../Directory.module.css"
 import SkeletonLoading from '../components/SkeletonLoading';
+import YearSlider from '../components/YearSlider';
 import { Button } from '@chakra-ui/react';
 import { RiArrowLeftLine, RiArrowRightLine } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 import { SparklesCore } from '../components/ui/sparkles';
+import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
-
+import { Spotlight } from '../components/ui/Spotlight';
 // da77d71e
 
 
@@ -18,7 +20,6 @@ const Directory = ({search, setSearch, page, setPage}) => {
     const [movieData, setMovieData] = useState([]);
     const [loading, setLoading] = useState(true);
     const [searchQuery, setSearchQuery] = useState('');
-    const [type, setType] = useState('');
 
 useLayoutEffect(() => {
     console.log('gsap animation GO!')
@@ -56,7 +57,7 @@ useLayoutEffect(() => {
 
     const searchResults = async (title) => {
         setLoading(true)
-        const response = await fetch(`${API__URL}&s=${title}&type=${type}&page=${page}`)
+        const response = await fetch(`${API__URL}&s=${title}&page=${page}`)
         const data = await response.json();
         setMovieData(data)
         setLoading(false)
@@ -66,7 +67,7 @@ useLayoutEffect(() => {
 
     useEffect(() => {
         startSearch();
-    }, [search, page, type]);
+    }, [search, page]);
 
 
     return (
@@ -103,19 +104,13 @@ useLayoutEffect(() => {
                         ></i>
                         </Link>
                         </div>
-                    <div className="search__type--wrapper">
-                        <button className={`search__type-button ${type === '' ? 'active' : ''}`}
-                        onClick={() => setType('')}
-                        >All</button>
-                        <button className={`search__type-button ${type === 'movie' ? 'active' : ''}`}
-                        onClick={() => setType('movie')}
-                        >Movies</button>
-                        <button className={`search__type-button ${type === 'series' ? 'active' : ''}`}
-                        onClick={() => setType('series')}
-                        >Series</button>
-                    </div>
                     </div>
 
+                    <div className="search__type--wrapper">
+                        <button className='search__type-button'>All</button>
+                        <button className='search__type-button'>Movies</button>
+                        <button className='search__type-button'>TV</button>
+                    </div>
             </div>
 
                      
