@@ -3,7 +3,7 @@ import { SparklesCore } from '../components/ui/sparkles';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -58,12 +58,18 @@ const Home = ({user}) => {
                     <h1 className='hh home_title'> Countless movies, shows, and more.</h1>
                     <h2 className='hh home_subtitle'>Welcome to Cinema Library, the universal library for all your favorite films.</h2>
 
-                   <Link to="/search">
+                   
                     <button className='hh home__explore--button'
+                    onClick={() => {
+                    if (user) {
+                     navigate('/search')
+                    }else {
+                        alert('')
+                    }
+                    }}
                     >
                         Explore
                     </button>
-                        </Link>
         </div>
 
                     <div className="home__movies--container">

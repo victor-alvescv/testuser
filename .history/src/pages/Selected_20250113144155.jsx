@@ -6,7 +6,7 @@ import { RiArrowLeftLine } from 'react-icons/ri';
 import { Link, useParams } from 'react-router-dom';
 import { h1 } from 'framer-motion/client';
 
-const Selected = ({setCart, cart, user}) => {
+const Selected = ({setCart, cart}) => {
 const {movieId} = useParams();
 const [movie, setMovie] = useState(null);
 const [price, setPrice] = useState();
@@ -92,7 +92,7 @@ useEffect(() => {
                             </div>
 
                             
-                            {added ? (
+                            {added && user ? (
                             <Link to="/cart">
                                 <Button
                                 className='gotocart__btn'
@@ -106,23 +106,18 @@ useEffect(() => {
                             variant='solid'
                             className='addtocart__btn'
                             onClick={() =>{ 
-                                if (user) {
-
-                                    setAdded(true)
-                                    setCart((prevCart) => {
-                                        const movieExists = prevCart.find((item) => item.movie.imdbID === movie.imdbID)    
-                                        if (movieExists) {
-                                            return prevCart.map((item) => 
-                                                item.movie.imdbID === movie.imdbID ? {...item, quantity: +item.quantity + 1} : item
-                                        )
-                                    } else {
-                                        return [...prevCart, {movie, quantity: 1, price: price}]
-                                    }
-                                    
-                                })
+                                 setAdded(true)
+                                setCart((prevCart) => {
+                                const movieExists = prevCart.find((item) => item.movie.imdbID === movie.imdbID)    
+                                if (movieExists) {
+                                return prevCart.map((item) => 
+                                    item.movie.imdbID === movie.imdbID ? {...item, quantity: +item.quantity + 1} : item
+                                )
                             } else {
-                                alert('Please sign in to use cart!')
+                                return [...prevCart, {movie, quantity: 1, price: price}]
                             }
+                            
+                                })
                             
                             }}
                             >

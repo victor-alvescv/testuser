@@ -3,7 +3,7 @@ import { SparklesCore } from '../components/ui/sparkles';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 

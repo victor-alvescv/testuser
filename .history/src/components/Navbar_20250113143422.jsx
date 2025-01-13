@@ -7,7 +7,8 @@ import { Avatar } from "./ui/avatar"
 import { RiArrowLeftLine, RiArrowRightLine } from 'react-icons/ri';
 import { Box, Button } from '@chakra-ui/react';
 
-const Nav = ({quantity, user}) => {
+const Nav = ({quantity}) => {
+  const [user, setUser] = useState(null)
   const [showMenu, setShowMenu] = useState(false)
   const menuRef = useRef(null)
 

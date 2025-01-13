@@ -58,7 +58,7 @@ const Home = ({user}) => {
                     <h1 className='hh home_title'> Countless movies, shows, and more.</h1>
                     <h2 className='hh home_subtitle'>Welcome to Cinema Library, the universal library for all your favorite films.</h2>
 
-                   <Link to="/search">
+                   <link to="/search">
                     <button className='hh home__explore--button'
                     >
                         Explore

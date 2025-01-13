@@ -8,6 +8,7 @@ import { PasswordInput } from '../components/ui/password-input';
 import movieCollage from '../assets/movie_collage.png'
 
 
+
 const Signin = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');

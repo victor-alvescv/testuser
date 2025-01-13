@@ -121,7 +121,7 @@ useEffect(() => {
                                     
                                 })
                             } else {
-                                alert('Please sign in to use cart!')
+                                alert
                             }
                             
                             }}

@@ -60,7 +60,7 @@ function AppContent() {
           <Route path='/signin' element={<Signin />} />
           <Route path='/signup' element={<Signup/>}/>
           <Route path='/search' element={<Directory search={search} setSearch={setSearch} page={page} setPage={setPage}/>} />
-          <Route path='/movie/:movieId' element={<Selected cart={cartValue} setCart={setCartValue} user={user} />} />
+          <Route path='/movie/:movieId' element={<Selected cart={cartValue} setCart={setCartValue} />} />
           <Route path='/cart' element={<CartCheckout cart={cartValue} setCart={setCartValue} setTotalQuant={setTotalCartQuant} />} />
         </Routes>
       </div>

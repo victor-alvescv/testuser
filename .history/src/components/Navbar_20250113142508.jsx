@@ -7,13 +7,28 @@ import { Avatar } from "./ui/avatar"
 import { RiArrowLeftLine, RiArrowRightLine } from 'react-icons/ri';
 import { Box, Button } from '@chakra-ui/react';
 
-const Nav = ({quantity, user}) => {
+const Nav = ({quantity}) => {
+  const [user, setUser] = useState(null)
   const [showMenu, setShowMenu] = useState(false)
   const menuRef = useRef(null)
+  const location = useLocation();
 
   const toggleMenu = () => {
     setShowMenu((prev) => !prev)
   };
+
+  useEffect(() => {
+    const auth = getAuth();
+    const checkLogin = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setUser(user)
+      } else {
+        setUser(null)
+      }
+      return () => checkLogin();
+    }, [])
+
+  }, []);
 
   function logout() {
     signOut(auth);

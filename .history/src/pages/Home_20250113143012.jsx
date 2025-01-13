@@ -1,16 +1,11 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { SparklesCore } from '../components/ui/sparkles';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
-import { getAuth, onAuthStateChanged } from 'firebase/auth';
-import { Link, useNavigate } from 'react-router-dom';
 
 
-
-
-const Home = ({user}) => {
-    const navigate = useNavigate();
-    
+const Home = () => {
     useGSAP(() => {
         gsap.from('.hh', {
             y: 175,
@@ -44,9 +39,6 @@ const Home = ({user}) => {
     })
 
 
-
-
-
     return (
         <div className="container">
             <div className="row">
@@ -58,12 +50,14 @@ const Home = ({user}) => {
                     <h1 className='hh home_title'> Countless movies, shows, and more.</h1>
                     <h2 className='hh home_subtitle'>Welcome to Cinema Library, the universal library for all your favorite films.</h2>
 
-                   <Link to="/search">
+                   
                     <button className='hh home__explore--button'
+                    onClick={() => {
+                        if user
+                    }}
                     >
                         Explore
                     </button>
-                        </Link>
         </div>
 
                     <div className="home__movies--container">

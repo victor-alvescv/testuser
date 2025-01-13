@@ -10,7 +10,6 @@ import Signin from "./pages/Signin";
 import { Provider } from './components/ui/provider'
 import { useEffect, useState } from "react";
 import Signup from "./pages/Signup";
-import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 function App() {
   return (
@@ -27,7 +26,6 @@ function AppContent() {
   const [totalCartQuant, setTotalCartQuant] = useState(0);
   const [search, setSearch] = useState('The Godfather');
   const [page, setPage] = useState(1);
-  const [user, setUser] = useState(null)
 
   
   useEffect(() => {
@@ -51,16 +49,14 @@ function AppContent() {
 
   return (
     <>
-    <Nav quantity={totalCartQuant} user={user}/>
+    <Nav quantity={totalCartQuant}/>
     <div className="App">
         <Routes>
-          <Route path='/' element={<Home
-          user={user}
-          className="home_page" />} />
+          <Route path='/' element={<Home className="home_page" />} />
           <Route path='/signin' element={<Signin />} />
           <Route path='/signup' element={<Signup/>}/>
           <Route path='/search' element={<Directory search={search} setSearch={setSearch} page={page} setPage={setPage}/>} />
-          <Route path='/movie/:movieId' element={<Selected cart={cartValue} setCart={setCartValue} user={user} />} />
+          <Route path='/movie/:movieId' element={<Selected cart={cartValue} setCart={setCartValue} />} />
           <Route path='/cart' element={<CartCheckout cart={cartValue} setCart={setCartValue} setTotalQuant={setTotalCartQuant} />} />
         </Routes>
       </div>
