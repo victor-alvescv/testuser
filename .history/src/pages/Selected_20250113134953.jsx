@@ -81,14 +81,13 @@ useEffect(() => {
 (
     <>
     <div className="movie__description__wrapper">
-                {movie.imdbRating === "N/A" ? 
-                (
+                {movie.imdbRating === "N/A" ? (
                 <h2>No Description Available</h2>
                 ) 
                 : 
                 (
                     <h2>{movie.Plot}</h2>
-                )}
+                )
                             </div>
 
                             

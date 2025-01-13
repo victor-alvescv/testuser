@@ -611,10 +611,6 @@ footer{
 }
 
 @media (max-width: 675px) {
-    .search__type--wrapper {
-        justify-content: center;
-    }
-
     .footer__wrapper {
         flex-direction: column;
     }

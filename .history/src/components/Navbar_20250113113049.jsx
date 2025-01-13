@@ -99,7 +99,7 @@ const Nav = ({quantity}) => {
                   <Avatar
                   className="avatar"
                   colorPalette='red' 
-                  border='2px solid white'
+                  borde
                   variant='solid'
                   onClick={toggleMenu}
                   size="sm"

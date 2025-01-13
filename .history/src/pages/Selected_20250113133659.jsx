@@ -54,12 +54,11 @@ useEffect(() => {
                         {movie ? (
                         <>
                             <h2 className='movie__details__title'>{movie.Title}</h2> 
-                            {movie.imdbRating === "N/A" ?
-                            (<h2 style={{marginTop: "5px", marginBottom: '5px'}}
-                            >No Star Rating Available</h2>)
-                            :
+                            {movie.imdbRating ?
                             ( <StarRating 
-                                rating={Number(movie.imdbRating) / 2} />)
+                            rating={Number(movie.imdbRating) / 2} />)
+                            :
+                            (<span>No Rating Available</span>)
                             }
                                
                             <h2>${price}</h2>
@@ -81,14 +80,7 @@ useEffect(() => {
 (
     <>
     <div className="movie__description__wrapper">
-                {movie.imdbRating === "N/A" ? 
-                (
-                <h2>No Description Available</h2>
-                ) 
-                : 
-                (
-                    <h2>{movie.Plot}</h2>
-                )}
+                                <h2>{movie.Plot}</h2>
                             </div>
 
                             

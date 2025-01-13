@@ -4,7 +4,6 @@ import { Button, Skeleton } from '@chakra-ui/react';
 import React, { useEffect, useState } from 'react';
 import { RiArrowLeftLine } from 'react-icons/ri';
 import { Link, useParams } from 'react-router-dom';
-import { h1 } from 'framer-motion/client';
 
 const Selected = ({setCart, cart}) => {
 const {movieId} = useParams();
@@ -22,9 +21,8 @@ useEffect(() => {
         const data = await response.json()
         console.log(data)
         setMovie(data)
-        if (data.Year) {
-            setPrice(Math.floor(data.Year / 100))
-        } else {setPrice(14)}
+        
+        setPrice(Math.floor(data.Year / 100))
     }
 
     return (
@@ -54,14 +52,8 @@ useEffect(() => {
                         {movie ? (
                         <>
                             <h2 className='movie__details__title'>{movie.Title}</h2> 
-                            {movie.imdbRating === "N/A" ?
-                            (<h2 style={{marginTop: "5px", marginBottom: '5px'}}
-                            >No Star Rating Available</h2>)
-                            :
-                            ( <StarRating 
-                                rating={Number(movie.imdbRating) / 2} />)
-                            }
-                               
+                                <StarRating 
+                                rating={Number(movie.imdbRating) / 2} />
                             <h2>${price}</h2>
                         </>        
                         ) : (<>
@@ -81,14 +73,7 @@ useEffect(() => {
 (
     <>
     <div className="movie__description__wrapper">
-                {movie.imdbRating === "N/A" ? 
-                (
-                <h2>No Description Available</h2>
-                ) 
-                : 
-                (
-                    <h2>{movie.Plot}</h2>
-                )}
+                                <h2>{movie.Plot}</h2>
                             </div>
 
                             

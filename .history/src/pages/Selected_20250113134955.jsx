@@ -88,7 +88,7 @@ useEffect(() => {
                 : 
                 (
                     <h2>{movie.Plot}</h2>
-                )}
+                )
                             </div>
 
                             

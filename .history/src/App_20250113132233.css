@@ -611,8 +611,8 @@ footer{
 }
 
 @media (max-width: 675px) {
-    .search__type--wrapper {
-        justify-content: center;
+    .search__type-button {
+        
     }
 
     .footer__wrapper {
