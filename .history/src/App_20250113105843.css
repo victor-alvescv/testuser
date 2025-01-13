@@ -599,9 +599,6 @@ footer{
     .search__header--title {
         font-size: 36px;
       }
-      .movie__description__wrapper {
-        font-size: 12px;
-    }
 }
 
 @media (max-width: 500px) {
@@ -628,6 +625,6 @@ footer{
         font-size: 28px;
     }
     .movie__description__wrapper {
-        font-size: 10px;
+        font-size: 8px;
     }
 }

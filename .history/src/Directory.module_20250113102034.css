@@ -91,14 +91,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .cardsContainer {
   
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
 }
 
 .skeleton {
@@ -217,8 +214,7 @@ body {
 
 .page__number {
   font-size: 20px;
-  margin: 0 4px 0 4px;
-  white-space: noWrap;
+  margin: 0 4px 0 4px
 }
 
 @media screen and (max-width: 740px) {
@@ -247,9 +243,10 @@ body {
   }
 
   .results__for {
-    font-size: 16px;
+    font-size: 20px;
     margin-right: 24px;
   }
+
 
 }
 
@@ -267,13 +264,11 @@ body {
   }
 
   .results__for {
-    font-size: 12px;
+    font-size: 16px;
   }
 
   .movie {
     width: "100%";
     margin: 1rem;
   }
-
-  
 }

@@ -19,6 +19,7 @@ const Directory = ({search, setSearch, page, setPage}) => {
 
     const [movieData, setMovieData] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [year, setYear] = useState([1888, 2024]);
     const [searchQuery, setSearchQuery] = useState('');
 
 useLayoutEffect(() => {
@@ -143,7 +144,7 @@ useLayoutEffect(() => {
                     </div>
 
                 <div className="cards__wrapper">
-            <div className={styles.cardsContainer}>
+            <div className={styles.container}>
 
                 {(movieData.Search?.length > 0 && !loading) 
                 ? 

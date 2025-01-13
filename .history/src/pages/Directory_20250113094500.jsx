@@ -143,7 +143,7 @@ useLayoutEffect(() => {
                     </div>
 
                 <div className="cards__wrapper">
-            <div className={styles.cardsContainer}>
+            <div className={styles.container}>
 
                 {(movieData.Search?.length > 0 && !loading) 
                 ? 

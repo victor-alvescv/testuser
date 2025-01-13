@@ -469,7 +469,6 @@ footer{
 }
     
 .searchbar__wrapper {
-  
     display: flex;
     justify-content: center;
 }
@@ -567,13 +566,8 @@ footer{
     .movie__details__title {
         font-size: 28px;
     }
-    .searchbar__wrapper {
-        width: 100%;
-    }
 }
 @media (max-width: 750px) {
-
-
     .movie__details__title {
         font-size: 24px;
     }
@@ -596,38 +590,20 @@ footer{
     .selected__container {
        height: 450px;
     }
-    .search__header--title {
-        font-size: 36px;
-      }
-      .movie__description__wrapper {
-        font-size: 12px;
-    }
 }
 
 @media (max-width: 500px) {
     .home_title {
-        font-size: 24px;
+        font-size: 28px;
         letter-spacing: -1.5px;
     }
     .home_subtitle {
         font-size: 12px;
     }
-    .home__explore--button {
-    width: 100px;    
-    font-size: 14px;
-    padding: 1px;
-    height: 40px;
+    .explore_button {
+        wd
     }
     .signup_form {
         min-width: 300px;
-    }
-    .home__movie--card {
-        flex-basis: calc(40% - 24px);
-    }
-    .search__header--title {
-        font-size: 28px;
-    }
-    .movie__description__wrapper {
-        font-size: 10px;
     }
 }

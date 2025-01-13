@@ -19,6 +19,7 @@ const Directory = ({search, setSearch, page, setPage}) => {
 
     const [movieData, setMovieData] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [year, setYear] = useState([1888, 2024]);
     const [searchQuery, setSearchQuery] = useState('');
 
 useLayoutEffect(() => {
@@ -112,7 +113,7 @@ useLayoutEffect(() => {
                   
                     <div className={styles.search__info__wrapper}>
                         <h1 className={styles.results__for}>Search results for: {search}</h1>
-                        <div className={styles.page__buttons__wrapper}>
+                        <h1 className={styles.page__number}>Page: {page}</h1>
                         {page === 1 ? (<><div></div></>) : (
                             <Button 
                             className='prevPage_btn'
@@ -124,9 +125,9 @@ useLayoutEffect(() => {
                         </Button>
                             
                         )}
-                        <h1 className={styles.page__number}>Page: {page}</h1>
                         {movieData.Search?.length > 0 ? ( 
                             <>
+            <div className={styles.page__buttons__wrapper}>
                        
                             <Button 
                             className='nextPage_btn'
@@ -136,14 +137,14 @@ useLayoutEffect(() => {
                             >
                            <RiArrowRightLine />
                             </Button>
+                            </div>
                             
                         </>
                             ) : (<></>)}
-                            </div>
                     </div>
 
                 <div className="cards__wrapper">
-            <div className={styles.cardsContainer}>
+            <div className={styles.container}>
 
                 {(movieData.Search?.length > 0 && !loading) 
                 ? 

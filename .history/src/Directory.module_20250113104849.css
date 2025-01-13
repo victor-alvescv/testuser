@@ -247,7 +247,7 @@ body {
   }
 
   .results__for {
-    font-size: 16px;
+    font-size: 20px;
     margin-right: 24px;
   }
 
@@ -267,13 +267,11 @@ body {
   }
 
   .results__for {
-    font-size: 12px;
+    font-size: 16px;
   }
 
   .movie {
     width: "100%";
     margin: 1rem;
   }
-
-  
 }

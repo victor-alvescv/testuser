@@ -567,13 +567,8 @@ footer{
     .movie__details__title {
         font-size: 28px;
     }
-    .searchbar__wrapper {
-        width: 100%;
-    }
 }
 @media (max-width: 750px) {
-
-
     .movie__details__title {
         font-size: 24px;
     }
@@ -599,9 +594,6 @@ footer{
     .search__header--title {
         font-size: 36px;
       }
-      .movie__description__wrapper {
-        font-size: 12px;
-    }
 }
 
 @media (max-width: 500px) {
@@ -626,8 +618,5 @@ footer{
     }
     .search__header--title {
         font-size: 28px;
-    }
-    .movie__description__wrapper {
-        font-size: 10px;
     }
 }

@@ -57,7 +57,7 @@ useLayoutEffect(() => {
 
     const searchResults = async (title) => {
         setLoading(true)
-        const response = await fetch(`${API__URL}&s=${title}&page=${page}`)
+        const response = await fetch(`${API__URL}&s=${title}&type=&page=${page}`)
         const data = await response.json();
         setMovieData(data)
         setLoading(false)
@@ -143,7 +143,7 @@ useLayoutEffect(() => {
                     </div>
 
                 <div className="cards__wrapper">
-            <div className={styles.cardsContainer}>
+            <div className={styles.container}>
 
                 {(movieData.Search?.length > 0 && !loading) 
                 ? 
