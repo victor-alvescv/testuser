@@ -102,7 +102,7 @@ const Home = ({user}) => {
                                 <img className='home__movie--poster' src={poster9} alt="" />
                             </div>
                             <div className="home__movie--card">
-                                <img className='home__movie--poster' src={poster10} alt="" />
+                                <img className='home__movie--poster' src="https://images.squarespace-cdn.com/content/v1/5a7f41ad8fd4d236a4ad76d0/1669842708561-ZGO3HUU3P9F24PKN1V6I/JungleBook_023B_ResUp_DC_v02logo2k.jpg" alt="" />
                             </div>
                         </div>
                     </div>

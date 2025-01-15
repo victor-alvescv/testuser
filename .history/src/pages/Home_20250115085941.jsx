@@ -87,22 +87,22 @@ const Home = ({user}) => {
                                 <img className='home__movie--poster' src={poster4} alt="" />
                             </div>
                             <div className="home__movie--card">
-                                <img className='home__movie--poster' src={poster5} alt="" />
+                                <img className='home__movie--poster' src={poster4} alt="" />
                             </div>
                             <div className="home__movie--card">
-                                <img className='home__movie--poster' src={poster6} alt="" />
+                                <img className='home__movie--poster' src="https://i5.walmartimages.com/seo/The-Godfather-Original-Movie-Poster-poster-Frameless-Gift-12-x-18-inch-30cm-x-46cm_c6df3fd5-1e9c-49ca-8cb6-1af6078df4c2.b21fd8bc877c5645b9340a53580833a2.jpeg" alt="" />
                             </div>
                             <div className="home__movie--card">
-                                <img className='home__movie--poster' src={poster7} alt="" />
+                                <img className='home__movie--poster' src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/action-movie-poster-template-design-0f5fff6262fdefb855e3a9a3f0fdd361_screen.jpg?ts=1700270983" alt="" />
                             </div>
                             <div className="home__movie--card">
-                                <img className='home__movie--poster' src={poster8} alt="" />
+                                <img className='home__movie--poster' src="https://m.media-amazon.com/images/I/61CRq2R6i4L._AC_UF894,1000_QL80_.jpg" alt="" />
                             </div>
                             <div className="home__movie--card">
-                                <img className='home__movie--poster' src={poster9} alt="" />
+                                <img className='home__movie--poster' src="https://lh4.googleusercontent.com/proxy/I4gierj6yMIjBy5O01cAK7pAmjXvn0kQY938aTn8T7SMWx3uecU_khgjX-ZjCJJTFWO48Ac-FpBtX0WU3NgZrXVSR7UhiLOydI71eGJQ-rI" alt="" />
                             </div>
                             <div className="home__movie--card">
-                                <img className='home__movie--poster' src={poster10} alt="" />
+                                <img className='home__movie--poster' src="https://images.squarespace-cdn.com/content/v1/5a7f41ad8fd4d236a4ad76d0/1669842708561-ZGO3HUU3P9F24PKN1V6I/JungleBook_023B_ResUp_DC_v02logo2k.jpg" alt="" />
                             </div>
                         </div>
                     </div>
